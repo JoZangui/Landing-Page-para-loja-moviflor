@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav class="top-nav">
-        <div class="menu-icon"><i class='bx bx-menu-alt-left'></i></div>
+        <div class="menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path></svg></div>
         <div id="logo">
             <img src="images/image_1.png" alt="LOGO">
         </div>
@@ -27,68 +27,74 @@
             </form>
         </div>
     </nav>
-    <nav class="side-nav">
-        <ul>
-            <li title="produtos">
-                <div class="icon-link">
+    <nav class="side-nav close">
+        <ul id="side-nav--item-container">
+            <li>
+                <div>
                     <a href="#">
-                        <i class = "cil-sofa"></i>
+                        <i class = "cil-sofa" title="produtos"></i>
                         <span class="link-name">Produtos</span>
                     </a>
                     <i class='bx bx-chevron-down arrow' ></i>
                 </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Produtos</a></li>
+                <ul class="submenu">
+                    <li class="link-name"><a href="#">Produtos</a></li>
                     <li><a href="#">Quarto</a></li>
                     <li><a href="#">Sala</a></li>
                     <li><a href="#">Sofás</a></li>
                     <li><a href="#">Mesas e Cadeiras</a></li>
                     <li><a href="#">Escritório</a></li>
                     <li><a href="#">Cozinhas</a></li>
-                    <li><a href="#">Casa de banho</a></li>
+                    <li><a href="#">Casas de Banho</a></li>
                     <li><a href="#">Iluminação</a></li>
                     <li><a href="#">Têxtil e Decoração</a></li>
                     <li><a href="#">Arrumação</a></li>
                 </ul>
             </li>
-            <li title="serviços">
-                <div class="icon-link">
+            <li>
+                <div>
                     <a href="#">
-                        <i class="bx bx-box"></i>
+                        <i class="bx bx-box" title="serviços"></i>
                         <span class="link-name">Serviços</span>
                     </a>
                     <i class='bx bx-chevron-down arrow' ></i>
                 </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Serviços</a></li>
+                <ul class="submenu">
+                    <li class="link-name"><a href="#">Serviços</a></li>
                     <li><a href="#">Entrega e Montagem</a></li>
                     <li><a href="#">Gabinete de Decoração</a></li>
-                    <li><a href="#">Serviço Dedicado a Empresas</a></li>
+                    <li><a href="#">Serviço Dedicado a empresas</a></li>
                 </ul>
             </li>
-            <li title="newsletter">
-                <div class="icon-link">
+            <li>
+                <div>
                     <a href="#">
-                        <i class="ai-newspaper"></i>
+                        <i class="ai-newspaper" title="newsletter"></i>
                         <span class="link-name">Newsletter</span>
                     </a>
-                    <i class='bx bx-chevron-down arrow' ></i>                
+                    <i class='bx bx-chevron-down arrow' ></i>
                 </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Newsletter</a></li>
-                    <li><a href="#">Registar</a></li>
+                <ul class="submenu">
+                    <li class="link-name"><a href="#">Newsletter</a></li>
+                    <li>
+                        <form action="">
+                            <p><label for="">Receba a nossa newsletter em seu email</label></p>
+                            <input type="text" placeholder="email">
+                            <button>Registar</button>
+                        </form>
+                    </li>
                 </ul>
             </li>
-            <li title="sobre nós">
-                <div class="icon-link">
+            <li>
+                <div>
                     <a href="#">
-                        <i class='bx bxl-medium-square'></i></i>
-                        <span class="link-name">Sobre nós</span>
+                        <i class="bx bx-info-square" title="sobre nós"></i></i>
+                        <span class="link-name">Sobre</span>
                     </a>
-                    <i class='bx bx-chevron-down arrow' ></i>                
+                    <i class='bx bx-chevron-down arrow' ></i>
                 </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Sobre nós</a></li>
+                <ul class="submenu">
+                    <li class="link-name"><a href="#">Sobre</a></li>
                     <li><a href="#">Conceito</a></li>
                     <li><a href="#">Missão</a></li>
                     <li><a href="#">História</a></li>
@@ -96,5 +102,6 @@
             </li>
         </ul>
     </nav>
+    <script src="script.js"></script>
 </body>
 </html>
