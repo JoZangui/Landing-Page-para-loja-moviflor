@@ -1,5 +1,5 @@
 * {
-    font-family: 'Montserrat';
+    font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 *::-webkit-scrollbar-thumb {
     border-radius: 12px;
@@ -30,17 +30,19 @@ button {
     z-index: 99;
     background-color: #ffff;
 }
-.top-nav > * {
+/* .top-nav > * {
     margin-right: 83px;
-}
-.top-nav .menu-icon i {
-    font-size: 32px;
+} */
+[d] {
+    transition: .2s ease-out;
 }
 .top-nav #logo {
     width: 106px;
     height: 35px;
     overflow: hidden;
     /* border: 1px solid; */
+    margin-left: 90px;
+    margin-right: 83px;
     box-sizing: border-box;
 }
 .top-nav #logo img {
@@ -72,6 +74,7 @@ button {
     background-color: transparent;
 }
 .top-nav #search-bar-container form input::placeholder {
+    font-family: 'Montserrat';
     font-size: 17px;
     font-style: italic;
 }
@@ -100,7 +103,9 @@ button {
     bottom: 0;
     overflow: auto;
     transition: width .4s ease-out;
+    box-shadow: 3px 0px 4px #0000003d;
     background-color: #ffff;
+    z-index: 98;
 }
 /* lista de icone */
 .side-nav #side-nav--item-container {

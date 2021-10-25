@@ -1,4 +1,5 @@
 let arrow = document.querySelectorAll(".arrow");
+let lines = document.querySelector('.lines');
         
 for (let i = 0; i < arrow.length; i++) {
     arrow[i].addEventListener("click", (e)=>{
@@ -8,13 +9,14 @@ for (let i = 0; i < arrow.length; i++) {
 }
 
 let sidebar = document.querySelector(".side-nav.close");
-let sidebarBtn = document.querySelector(".menu-icon");
-console.log(sidebarBtn);
+let menuIcon = document.querySelector(".menu-icon");
+// console.log(menuIcon);
 
-sidebarBtn.addEventListener('click', ()=> {
-    if (sidebar.className == 'side-nav close') {
-        sidebar.className = 'side-nav'
+menuIcon.addEventListener('click', ()=> {
+    sidebar.classList.toggle('close')
+    if (lines.getAttribute('d') == "M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z") {
+        lines.setAttribute('d', "M4 11h16v2H4zm0-5h16v2H4zm0 12h16.235v-2H4z")
     } else {
-        sidebar.className = 'side-nav close'
+        lines.setAttribute('d', "M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z")
     }
 })
