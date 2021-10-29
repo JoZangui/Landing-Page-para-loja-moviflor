@@ -32,7 +32,6 @@
 .info .text {
     width: 356px;
     max-height: 276px;
-    /* border: 1px solid; */
 }
 .info .text h1 {
     margin: 0;
@@ -51,7 +50,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid; */
     margin: 117px 0 0px;
 }
 .info .buttons button {
@@ -70,12 +68,10 @@
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    /* border: 1px solid; */
 }
 .info .buttons .dots-container .dots {
     width: 11px;
     height: 11px;
-    /* border: 1px solid; */
     border-radius: 100%;
     transition: all .2s ease-out;
     background-color: #C4C4C4;
@@ -103,7 +99,6 @@
     list-style: none;
     margin: 0;
     padding: 0 60px;
-    /* border: 1px solid; */
     box-sizing: border-box;
 }
 #soluctions li {
@@ -152,7 +147,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid; */
 }
 #soluctions li .icons-and-buttons i {
     font-size: 46px;
@@ -176,7 +170,6 @@
 .servico-header-container {
     width: 100%;
     height: 348px;
-    /* border: 1px solid; */
 }
 .servico-header-container .section-info {
     height: 348px;
@@ -187,20 +180,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 36px 60px 36px 134px;
-    /* border: 1px solid; */
+    padding: 0px 60px 0px 134px;
     transform: translateX(621px);
 }
 .servico-header-container .section-info .info .text {
     text-align: right;
-    /* border: 1px solid; */
 }
 .servico-header-container .section-info .info .icons {
     display: flex;
     justify-content: flex-end;
     font-size: 46px;
     color: #003E19;
-    /* border: 1px solid; */
 }
 .servico-header-container .section-info .info .icons > * {
     margin-left: 26px;
@@ -216,7 +206,6 @@
 .servicos-produtos .portfolios-containers .images {
     height: 557px;
     overflow: hidden;
-    /* background-color: gray; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -225,5 +214,184 @@
     grid-column-start: 2;
     grid-column-end: 4;
 }
-/* .servicos-produtos .portfolios-containers .images {
-} */
+.artigos-section {
+    width: 86%;
+    height: 382px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 131px 90px;
+    padding: 25px 0;
+    background-color: #ffff;
+}
+.artigos-section h1 {
+    font-size: 37px;
+    color: #003E19;
+    margin: 0;
+    padding: 0;
+}
+.artigos-section button {
+    width: 95px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #003E19;
+    padding: 7px 26px;
+    border: 1px solid #003E19;
+    border-radius: 4px;
+    background-color: #ffff;
+}
+.artigos-section button:hover {
+    color: #ffff;
+    background-color: #003E19;
+}
+.artigos-container {
+    width: 100%;
+    height: 382px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.artigos-container .artigos {
+    height: 206px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #0d17003a;
+}
+.artigos-container .artigos:nth-child(2) {
+    width: 307px;
+    margin: 0 9px;
+}
+.artigos-container .artigos:first-child, .artigos-container .artigos:last-child {
+    width: 303px;
+}
+.artigos-container .artigos .artigo-images {
+    max-height: 338px;
+    overflow: hidden;
+    /* border: 1px solid; */
+}
+.artigos-container .artigos .artigo-images img {
+    width: 100%;
+}
+.artigos-container .artigos:nth-child(2) .artigo-images {
+    max-width: 324px;
+}
+.artigos-container .artigos:first-child .artigo-images,
+.artigos-container .artigos:last-child .artigo-images {
+    max-width: 303px;
+}
+.section-testemunho {
+    width: 86%;
+    height: 382px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px 131px 90px;
+    padding: 36px 60px 35px;
+    box-sizing: border-box;
+    background-color: #ffff;
+}
+.section-testemunho .facebook-likes-info {
+    width: 776px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid; */
+}
+.section-testemunho .facebook-likes-info {
+    color: #003E19;
+}
+.section-testemunho .facebook-likes-info .facebook-icon .iconify {
+    font-size: 46px;
+}
+.section-testemunho .facebook-likes-info .text {
+    display: flex;
+    align-items: center;
+}
+.section-testemunho .peoples {
+    width: 1058px;
+    height: 218px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid; */
+}
+.section-testemunho .peoples .persom {
+    width: 300px;
+    height: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+.section-testemunho .peoples .persom .profile-image {
+    width: 64px;
+    height: 64px;
+    /* border: 1px solid; */
+    border-radius: 100%;
+}
+.section-testemunho .peoples .persom .username-comment {
+    width: 216px;
+}
+.section-testemunho .peoples .persom .username-comment .username {
+    height: 33.06px;
+    font-size: 18px;
+    color: #003E19;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.section-testemunho .peoples .persom .username-comment .comment {
+    height: 57px;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.section-location {
+    width: 86%;
+    height: 918px;
+    margin: 0px 131px 90px;
+    background-color: #ffff;
+}
+.section-location .map-container {
+    width: 100%;
+    height: 626px;
+    background-image: url("../images/map.png");
+}
+.section-location .map-container .text-icon-container {
+    width: 100%;
+    height: 130px;
+    color: #003E19;
+    padding: 32px 60px 31px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+.section-location .map-container .text-icon-container .text-icon {
+    width: 560px;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid; */
+}
+.section-location .map-container .text-icon-container .text-icon .iconify {
+    font-size: 46px;
+}
+.section-location .map-container .text-icon-container .text-icon .text {
+    width: 487px;
+    /* border: 1px solid; */
+}
+.section-location .map-container .text-icon-container .text-icon .text h1, p {
+    margin: 0;
+    padding: 0;
+}
+.section-location .map-container .text-icon-container .text-icon .text p {
+    font-size: 18px;
+    /* font-weight: bold; */
+}
