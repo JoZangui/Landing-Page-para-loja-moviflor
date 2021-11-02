@@ -2,12 +2,11 @@
     font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 *::-webkit-scrollbar-thumb {
-    /* border-radius: 12px; */
-    background-color: #003E19;
+    border-radius: 20px;
+    background-color: #646464;
 }
 *::-webkit-scrollbar {
     width: 8px;
-    /* border-radius: 12px; */
     background-color: lightgray;
 }
 body {
@@ -31,9 +30,6 @@ button {
     z-index: 99;
     background-color: #ffff;
 }
-/* .top-nav > * {
-    margin-right: 83px;
-} */
 [d] {
     transition: .2s ease-out;
 }
@@ -41,7 +37,6 @@ button {
     width: 106px;
     height: 35px;
     overflow: hidden;
-    /* border: 1px solid; */
     margin-left: 90px;
     margin-right: 83px;
     box-sizing: border-box;
@@ -49,13 +44,13 @@ button {
 .top-nav #logo img {
     width: 100%;
 }
-/* barra de pesquisa */
 .top-nav #search-bar-container {
-    width: 988px;
+    width: 917px;
     height: 40px;
     padding: 4px;
     box-sizing: border-box;
     overflow: hidden;
+    margin-right: 31px;
     background-color: #E5E5E5;
 }
 .top-nav #search-bar-container form {
@@ -69,7 +64,6 @@ button {
 .top-nav #search-bar-container form input {
     width: 90%;
     padding: 0 12px;
-    /* margin-left: 12px; */
     border: none;
     outline: none;
     background-color: transparent;
@@ -82,7 +76,6 @@ button {
 .top-nav #search-bar-container form button {
     width: 44px;
     height: 32px;
-    /* transform: translateX(19px); */
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
@@ -91,6 +84,14 @@ button {
 .top-nav #search-bar-container form button i {
     font-size: 19pt;
     color: #E5E5E5;
+}
+.top-nav .shopping-cart {
+    font-size: 30px;
+    color: darkgray;
+    transition: color .2s ease-in-out;
+}
+.top-nav .shopping-cart:hover {
+    color: #003E19;
 }
 .side-nav {
     width: 308px;
@@ -110,7 +111,6 @@ button {
 }
 /* lista de icone */
 .side-nav #side-nav--item-container {
-    /* width: 48px; */
     height: 317px;
     list-style: none;
     padding: 0 9px;
@@ -141,14 +141,13 @@ button {
     margin-right: 10px;
 }
 .side-nav #side-nav--item-container li div .arrow {
-    transition: transform .4s ease-out;
+    transition: transform .4s cubic-bezier(0.38, 0.29, 0.36, 1.32);
 }
 .side-nav #side-nav--item-container li .submenu {
     height: 190px;
     display: none;
     margin: 0;
     padding-left: 30px;
-    /* border: 1px solid; */
     list-style: none;
     overflow-y: auto;
     overflow-x: hidden;
@@ -184,7 +183,7 @@ button {
 
 /* when it's closed */
 .side-nav.close {
-    width: 48px; /* old - 58px */
+    width: 48px;
     overflow: visible;
 }
 .side-nav.close #side-nav--item-container {
@@ -206,12 +205,10 @@ button {
 .side-nav.close #side-nav--item-container li .submenu {
     display: block;
     position: absolute;
-    /* top: 0px; */
     left: 100%;
     opacity: 0;
     padding-left: 0;
     white-space: nowrap;
-    /* transition: opacity .9s ease; */
     pointer-events: none;
     background-color: whitesmoke;
 }

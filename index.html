@@ -20,23 +20,34 @@
     <title>Home</title>
 </head>
 <body>
+    <!-- top nav -->
     <nav class="top-nav">
+        <!-- Hamburger button icon -->
         <div class="menu-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
                 <path class="lines" d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
             </svg>
         </div>
+        
+        <!-- moviflor logo -->
         <div id="logo">
             <img src="images/image_1.png" alt="LOGO">
         </div>
+
+        <!-- search bar -->
         <div id="search-bar-container">
             <form action="" method="GET">
                 <input type="text" placeholder="O que procura!?...">
                 <button><i class='bx bx-search-alt-2'></i></button>
             </form>
         </div>
+        <!-- shopping cart -->
+        <a href="#" title="ver seu carrinho" ><i class="iconify shopping-cart" data-icon="carbon:shopping-cart" data-flip="horizontal"></i></a>
     </nav>
+    
+    <!-- side nav -->
     <nav class="side-nav close">
+        <!-- side nav list item -->
         <ul id="side-nav--item-container">
             <li>
                 <div>
@@ -111,14 +122,16 @@
             </li>
         </ul>
     </nav>
-    <section class="header-container">
-        <div class="section-info">
+
+    <!-- site header -->
+    <section id="section-header">
+        <div class="header-info">
             <div class="info">
                 <div class="text">
                     <h1>Lar meu doce lar</h1>
                     <p>O seu doce lar merece todo o cuidado com aquele toque especial que só você sabe dar, e com aquela forcinha da Moviflor fica ainda melhor</p>
                 </div>
-                <div class="buttons">
+                <div class="button-carousel-dots">
                     <button>Ver mais</button>
                     <div class="dots-container">
                         <span class="dots"></span>
@@ -129,7 +142,7 @@
             </div>
         </div>
     </section>
-    <section class="servicos-produtos">
+    <section id="section-portfolio">
         <ul id="soluctions">
             <li>
                 <div class="text">
@@ -162,8 +175,9 @@
                 </div>
             </li>
         </ul>
-        <div class="servico-header-container">
-            <div class="section-info">
+        <div class="portfolio-info-container">
+            <!-- experimentar apagar  a div "portfolio-info" mais tarde-->
+            <div class="portfolio-info">
                 <div class="info">
                     <div class="text">
                         <h1>Tudo para si e a sua família</h1>
@@ -178,7 +192,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolios-containers">
+        <div id="portfolios-images">
             <div class="images" style="background-image: url('images/pexels-jean-van-der-meulen-1457844.jpg');">
             </div>
             <div class="images" style="background-image: url('images/pexels-isaw-company-945688.jpg');">
@@ -191,28 +205,28 @@
             </div>
         </div>
     </section>
-    <section class="artigos-section">
+    <section id="section-products">
         <h1>Artigos</h1>
-        <div class="artigos-container">
-            <div class="artigos">
-                <div class="artigo-images">
+        <div class="products-container">
+            <div class="products">
+                <div class="products-images">
                     <img src="images/pngwing.com.png" alt="">
                 </div>
             </div>
-            <div class="artigos">
-                <div class="artigo-images">
+            <div class="products">
+                <div class="products-images">
                     <img src="images/pngwing.com_2.png" alt="">
                 </div>
             </div>
-            <div class="artigos">
-                <div class="artigo-images">
+            <div class="products">
+                <div class="products-images">
                     <img src="images/pngwing.com_7.png" alt="">
                 </div>
             </div>
         </div>
         <button>Todos</button>
     </section>
-    <section class="section-testemunho">
+    <section id="section-testimony">
         <div class="facebook-likes-info">
             <div class="facebook-icon">
                 <i class="iconify" data-icon="ant-design:facebook-filled"></i>
@@ -223,7 +237,7 @@
             </div>
         </div>
         <div class="peoples">
-            <div class="persom">
+            <div class="person">
                 <div class="profile-image">
                     <img src="images/Ellipse 4.png" alt="">
                 </div>
@@ -232,7 +246,7 @@
                     <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</p>
                 </div>
             </div>
-            <div class="persom">
+            <div class="person">
                 <div class="profile-image">
                     <img src="images/Ellipse 5.png" alt="">
                 </div>
@@ -241,7 +255,7 @@
                     <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</p>
                 </div>
             </div>
-            <div class="persom">
+            <div class="person">
                 <div class="profile-image">
                     <img src="images/Ellipse 8.png" alt="">
                 </div>
@@ -250,7 +264,7 @@
                     <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</p>
                 </div>
             </div>
-            <div class="persom">
+            <div class="person">
                 <div class="profile-image">
                     <img src="images/Ellipse 4-1.png" alt="">
                 </div>
@@ -259,7 +273,7 @@
                     <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</p>
                 </div>
             </div>
-            <div class="persom">
+            <div class="person">
                 <div class="profile-image">
                     <img src="images/Ellipse 5-1.png" alt="">
                 </div>
@@ -268,7 +282,7 @@
                     <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</p>
                 </div>
             </div>
-            <div class="persom">
+            <div class="person">
                 <div class="profile-image">
                     <img src="images/Ellipse 8-1.png" alt="">
                 </div>
@@ -279,7 +293,7 @@
             </div>
         </div>
     </section>
-    <section class="section-location">
+    <section id="section-location">
         <div class="map-container">
             <div class="text-icon-container">
                 <div class="text-icon">
@@ -293,7 +307,81 @@
                 </div>
             </div>
         </div>
+        <div class="about-moviflor">
+            <div class="text-icon">
+                <div class="icon">
+                    <img src="images/Moviflor-self_logo.png" alt="">
+                </div>
+                <p>
+                    Com produtos de excelente relação qualidade/preço, oferecemos aos nossos clientes a possibilidade de, num único local, satisfazerem todas as suas necessidades de mobiliário e decoração. Poderão também requerer o serviço de entrega e montagem.
+                    <br><br>
+                    Quando o objectivo é ter mais conforto e design em sua casa, estes são factores que facilitam a sua vida. <a href="#">Saiba mais</a>
+                </p>
+            </div>
+        </div>
     </section>
+    <footer class="main-footer">
+        <div class="footer-info">
+            <ul class="moviflor">
+                <li class="list-title">
+                    <img src="images/footer-moviflor-icon.png" alt="">
+                </li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Termos e condições</a></li>
+                <li><a href="#">política de privacidade</a></li>
+                <li><a href="#">Onde estamos</a></li>
+            </ul>
+            <ul class="servicos">
+                <li class="list-title">Serviços</li>
+                <li><a href="#">Entrega e montagem</a></li>
+                <li><a href="#">Gabinete de decoração</a></li>
+                <li><a href="#">Serviço dedicado a empresas</a></li>
+            </ul>
+            <ul>
+                <li class="list-title">Moviflor Newsletter</li>
+                <li>Assine a nossa newsletter para receber as ultimas novidades a tempo e horas</a></li>
+                <li id="footer-newsletter-form">
+                    <form action="" method="post">
+                        <input type="email" placeholder="exemplo@email.com">
+                        <button>Cadastrar</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="credits-container">
+            <div id="credits-title-bar">
+                <p>imagens by: <span>pexels.com</span> & <span>pngwing.com</span></p>
+                <i class="iconify credits-arrow" data-icon="dashicons:arrow-up-alt2" data-flip="horizontal"></i>
+            </div>
+            <div id="credit list">
+                <!-- pexels credits -->
+                <ul>
+                    <li><span>Fotos by:</span> Jason Boyd from Pexels</li>
+                    <li> Max Vakhtbovych from Pexels</li>
+                    <li> Jean van der Meulen from Pexels</li>
+                    <li> iSAW Company from Pexels</li>
+                    <li> Element5 Digital from Pexels</li>
+                    <li> Marta Dzedyshko from Pexels</li>
+                    <li> Medhat Ayad from Pexels</li>
+                </ul>
+                <!-- pngwing -->
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <footer class="subfooter">
+        <div id="content">
+            <p> Copyright &copy; Moviflor <a href="#">Ficha técnica</a> | <a href="#">Mapa do Site</a></p>
+            <div id="social-media-icons">
+                <a href="facebook/#"><i class="iconify" data-icon="foundation:social-facebook"></i></a>
+                <a href="twitter/#"><i class="iconify" data-icon="foundation:social-twitter"></i></a>
+                <a href="instagram/#"><i class="iconify" data-icon="simple-line-icons:social-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 </body>
