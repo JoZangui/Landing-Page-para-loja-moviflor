@@ -1,7 +1,0 @@
-header - Photo by Jason Boyd from Pexels;
-portifolio header - Photo by Max Vakhtbovych from Pexels;
-portifolio images 1 - Photo by Jean van der Meulen from Pexels;
-portifolio images 2 - Photo by iSAW Company from Pexels;
-portifolio images 3 - Photo by Element5 Digital from Pexels;
-portifolio images 4 - Photo by Marta Dzedyshko from Pexels;
-portifolio images 5 - Photo by Medhat Ayad from Pexels;

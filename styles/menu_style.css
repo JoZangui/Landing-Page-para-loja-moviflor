@@ -137,7 +137,7 @@ button {
 .side-nav #side-nav--item-container li .submenu .link-name {
     display: none;
 }
-.side-nav #side-nav--item-container li div a i {
+.side-nav #side-nav--item-container li div a .iconify {
     margin-right: 10px;
 }
 .side-nav #side-nav--item-container li div .arrow {
@@ -166,10 +166,10 @@ button {
     text-decoration: none;
     color: #000000;
 }
-.side-nav #side-nav--item-container li:hover > i {
+.side-nav #side-nav--item-container li:hover > .iconify {
     color: #003E19;
 }
-.side-nav #side-nav--item-container li i {
+.side-nav #side-nav--item-container li .iconify, i {
     font-size: 29px;
     cursor: pointer;
 }
