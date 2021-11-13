@@ -253,3 +253,8 @@ button {
 .side-nav.close #side-nav--item-container li .submenu li:hover a {
     color: #003E19;
 }
+@media screen and (width:360px) {
+    .menu-icon {
+        display: none;
+    }
+}
