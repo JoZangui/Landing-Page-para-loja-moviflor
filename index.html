@@ -20,21 +20,22 @@
                 <path class="lines" d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
             </svg>
         </div>
-        
-        <!-- moviflor logo -->
-        <div id="logo">
-            <img src="images/image_1.png" alt="LOGO">
+        <div id="topnav-itens-container">
+            <!-- moviflor logo -->
+            <div id="logo">
+                <img src="images/image_1.png" alt="LOGO">
+            </div>
+    
+            <!-- search bar -->
+            <div id="search-bar-container">
+                <form action="" method="GET">
+                    <input type="text" placeholder="O que procura!?...">
+                    <button><i class='bx bx-search-alt-2'></i></button>
+                </form>
+            </div>
+            <!-- shopping cart -->
+            <a href="#" title="ver seu carrinho" ><i class="iconify shopping-cart" data-icon="carbon:shopping-cart" data-flip="horizontal"></i></a>
         </div>
-
-        <!-- search bar -->
-        <div id="search-bar-container">
-            <form action="" method="GET">
-                <input type="text" placeholder="O que procura!?...">
-                <button><i class='bx bx-search-alt-2'></i></button>
-            </form>
-        </div>
-        <!-- shopping cart -->
-        <a href="#" title="ver seu carrinho" ><i class="iconify shopping-cart" data-icon="carbon:shopping-cart" data-flip="horizontal"></i></a>
     </nav>
     
     <!-- side nav -->
@@ -123,7 +124,7 @@
                     <h1>
                         Bem-vindo(a) à Moviflor
                     </h1>
-                    <i class='bx bx-chevron-down arrow' ></i>
+                    <!-- <i class='bx bx-chevron-down arrow' id="header-section-arrow"></i> -->
                 </div>
                 <p>O seu doce lar merece todo o cuidado com aquele toque especial que só você sabe dar, e com aquela forcinha da Moviflor fica ainda melhor</p>
                 <a href="#">Ver mais</a>
@@ -171,19 +172,18 @@
             </li>
         </ul>
         <div class="portfolio-info-container">
-            <!-- experimentar apagar  a div "portfolio-info" mais tarde-->
-            <div class="portfolio-info">
-                <div class="info">
-                    <div class="text">
+            <div class="info">
+                <div class="text">
+                    <div>
                         <h1>Tudo para si e a sua família</h1>
-                        <p>Encontre o melhor para si e a sua família, dê aos seus o melhor conforto possível pelo melhor preço</p>
                     </div>
-                    <div class="icons">
-                        <i class="iconify" data-icon="mdi:sofa-outline"></i>
-                        <i class="iconify" data-icon="ic:outline-table-restaurant"></i>
-                        <i class="iconify" data-icon="la:bed"></i>
-                        <i class="iconify" data-icon="mdi:flower-tulip-outline"></i>
-                    </div>
+                    <p>Encontre o melhor para si e a sua família, dê aos seus o melhor conforto possível pelo melhor preço</p>
+                </div>
+                <div class="icons">
+                    <i class="iconify" data-icon="mdi:sofa-outline"></i>
+                    <i class="iconify" data-icon="ic:outline-table-restaurant"></i>
+                    <i class="iconify" data-icon="la:bed"></i>
+                    <i class="iconify" data-icon="mdi:flower-tulip-outline"></i>
                 </div>
             </div>
         </div>
@@ -367,6 +367,30 @@
             </div>
         </div>
     </footer>
+    <div class="bottom-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="iconify" data-icon="cil:sofa" data-flip="horizontal"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="iconify" data-icon="bx:bx-box" data-flip="horizontal"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="iconify" data-icon="akar-icons:newspaper"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="iconify" data-icon="bx:bx-info-square"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <footer class="subfooter">
         <div id="content">
             <p> Copyright &copy; Moviflor <a href="#">Ficha técnica</a> | <a href="#">Mapa do Site</a></p>
