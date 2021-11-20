@@ -28,10 +28,8 @@
     background-position: center;
     background-size: cover;
 }
-#section-header, #section-header .info {
-    height: 439px;
-}
 #section-header .info {
+    height: 459px;
     padding: 55px 134px 0px 60px;
     justify-content: space-around;
 }
@@ -215,20 +213,17 @@
 #section-portfolio .portfolio-info-container {
     width: 100%;
     height: 348px;
-}
-#section-portfolio .portfolio-info-container {
-    height: 348px;
+    display: flex;
+    flex-direction: row-reverse;
     background-image: url("../images/pexels-max-vakhtbovych-6538898.jpg");
 }
 #section-portfolio .portfolio-info-container .info {
     height: 348px;
     justify-content: space-between;
     padding: 0px 60px 0px 90px;
-    transform: translateX(621px);
 }
 #section-portfolio .portfolio-info-container .info .text {
     width: 400px;
-    /* border: 1px solid; */
     text-align: right;
 }
 #section-portfolio .portfolio-info-container .info .text div > h1 {
@@ -237,6 +232,7 @@
 #section-portfolio .portfolio-info-container .info .icons {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     font-size: 46px;
     color: #003E19;
 }
@@ -630,7 +626,8 @@
     font-size: 14px;
 }
 @media screen and (max-width:1281px) {
-    .info {
+    #section-header .info,
+    #section-portfolio .portfolio-info-container .info {
         width: 100%;
         height: 112px;
         position: relative;
@@ -641,21 +638,22 @@
         transition: height .2s ease-out;
 
     }
-    .info .text {
+    #section-header .info .text,
+    #section-portfolio .portfolio-info-container .info .text{
         width: 100%;
         height: 135px;
         overflow: hidden;
     }
-    .info .text div {
+    #section-header .info .text div {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .info .text div > i{
+    #section-header .info .text div > i{
         display: inline-block;
         color: #003E19;
     }
-    .info .text > a {
+    #section-header .info .text > a {
         width: 80px;
         display: none;
         font-size: 14px;
@@ -663,14 +661,16 @@
         padding: 5px 0;
         border-radius: 4px;
     }
-    .info .text div > h1 {
+    #section-header .info .text div > h1,
+    #section-portfolio .portfolio-info-container .info .text div h1 {
         width: 600px;
         font-size: 25px;
     }
-    .info .text p {
+    #section-header .info .text p,
+    #section-portfolio .portfolio-info-container .info .text p {
         display: none;
     }
-    .info .carousel-dots-container {
+    #section-header .info .carousel-dots-container {
         margin-top: 2%;
         flex-direction: row;
         justify-content: flex-start;
@@ -683,13 +683,14 @@
         padding: 0 inherit;
     }
     #section-portfolio #soluctions li {
-        width: unset;
+        width: 30%;
         height: 120px;
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: center;
         border-top: 0;
-        padding: 0;
+        padding: 14px 0 10px;
+        box-sizing: border-box;
     }
     #section-portfolio #soluctions li .text {
         width: 90px;
@@ -713,6 +714,23 @@
     #section-portfolio #soluctions li .icons-and-buttons button {
         display: none;
     }
+    #section-portfolio .portfolio-info-container .info .text {
+        height: 40px;
+        text-align: left;
+        /* border: 1px solid; */
+    }
+    #section-portfolio .portfolio-info-container .info .icons {
+        height: 29px;
+        justify-content: flex-start;
+        /* border: 1px solid; */
+        font-size: 26px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    #section-portfolio .portfolio-info-container .info .icons > * {
+        margin-left: 0;
+        margin-right: 26px;
+    }
 }
 @media screen and (max-width:885px) {
     /*section header */
@@ -733,12 +751,16 @@
         height: 239px;
         margin: 110px auto 32px;
     }
-    #section-header .info {
+    #section-header .info, #section-portfolio .portfolio-info-container .info {
         height: 79px;
         padding: 10px 5% 15px 5%;
     }
     #section-header .info .text div > h1 {
         font-size: 15px;
+    }
+
+    #section-portfolio .portfolio-info-container .info .text div > h1 {
+        font-size: 20px;
     }
     #section-header .info .carousel-dots-container {
         justify-content: flex-start;
@@ -766,6 +788,9 @@
     }
     #section-portfolio #soluctions li .icons-and-buttons .iconify {
         font-size: 32px;
+    }
+    #section-portfolio .portfolio-info-container .info .icons {
+        font-size: 22px;
     }
 }
 @media screen and (max-width: 320px) {
