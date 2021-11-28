@@ -52,7 +52,6 @@ leftArrow.addEventListener('click', _=> {
 });
 
 rightArrow.addEventListener('click', _=> {
-    // debugger
     imageCollection.style.backgroundImage = images[imageIndex + 1];
 
     imageIndex ++;
