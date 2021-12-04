@@ -15,7 +15,7 @@
 }
 #section-header {
     height: 459px;
-    margin: 161px 9.9% 32px;
+    margin: 141px 9.9% 32px;
     overflow: hidden;
     box-sizing: border-box;
     background: url("../images/pexels-jason-boyd-3209045.jpg");
@@ -295,10 +295,10 @@
     background-color: #003E19;
 }
 #section-products .products-container {
-    width: 100%;
+    width: 90%;
     height: 382px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
 }
@@ -319,14 +319,11 @@
     width: 303px;
 }
 #section-products .products-container .products .products-images {
-    max-height: 338px;
+    max-height: 284px;
     overflow: hidden;
 }
 #section-products .products-container .products .products-images img {
     width: 100%;
-}
-#section-products .products-container .products:nth-child(2) .products-images {
-    max-width: 324px;
 }
 #section-products .products-container .products:first-child .products-images,
 #section-products .products-container .products:last-child .products-images {
@@ -342,10 +339,11 @@
     background-color: #ffff;
 }
 #section-testimony .facebook-likes-info {
-    width: 776px;
+    width: 99%;
     height: 46px;
     display: flex;
     align-items: center;
+    /* border: 1px solid; */
 }
 #section-testimony .facebook-likes-info {
     color: #003E19;
@@ -357,13 +355,19 @@
     display: flex;
     align-items: center;
 }
+#section-testimony .facebook-likes-info .text p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 #section-testimony .peoples {
-    width: 1058px;
+    width: 99%;
     height: 218px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    overflow: auto;
 }
 #section-testimony .peoples .person {
     width: 300px;
@@ -377,6 +381,10 @@
     width: 64px;
     height: 64px;
     border-radius: 100%;
+    overflow: hidden;
+}
+#section-testimony .peoples .person .profile-image img {
+    width: 100%;
 }
 #section-testimony .peoples .person .username-comment {
     width: 216px;
@@ -400,13 +408,17 @@
     width: 86%;
     height: 918px;
     background-color: #ffff;
+    overflow: hidden;
 }
 #section-location .map-container {
-    width: 100%;
+    max-width: 100%;
     height: 626px;
     background-image: url("../images/map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-#section-location .map-container .text-icon-container {
+#section-location .map-container .map-header {
     width: 100%;
     height: 130px;
     color: #003E19;
@@ -414,55 +426,62 @@
     box-sizing: border-box;
     background-color: #ffffff;
 }
-#section-location .map-container .text-icon-container .text-icon {
+#section-location .map-container .map-header .text-and-icon {
     width: 560px;
     height: 67px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#section-location .map-container .text-icon-container .text-icon .iconify {
+#section-location .map-container .map-header .text-and-icon .iconify {
     font-size: 46px;
 }
-#section-location .map-container .text-icon-container .text-icon .text {
+#section-location .map-container .map-header .text-and-icon .text {
     width: 487px;
 }
-#section-location .map-container .text-icon-container .text-icon .text h1, p {
+#section-location .map-container .map-header .text-and-icon .text h1, p {
     margin: 0;
     padding: 0;
 }
-#section-location .map-container .text-icon-container .text-icon .text p {
+#section-location .map-container .map-header .text-and-icon .text p {
     font-size: 18px;
 }
 #section-location .about-moviflor {
     width: 100%;
     height: 292px;
+    position: relative;
     padding: 61px 60px 39px;
     box-sizing: border-box;
+    overflow: hidden;
     background-color: #ffff;
 }
-#section-location .about-moviflor .text-icon {
-    width: 1057px;
+#section-location .about-moviflor .text-and-icon {
+    max-width: 100%;
     height: 192px;
     box-sizing: border-box;
+    overflow: hidden;
 }
-#section-location .about-moviflor .text-icon .icon {
+#section-location .about-moviflor .text-and-icon .icon {
     width: 129px;
     height: 47px;
     margin-bottom: 35px;
 }
-#section-location .about-moviflor .text-icon .icon img {
+#section-location .about-moviflor .text-and-icon .icon img {
     width: 100%;
 }
-#section-location .about-moviflor .text-icon p {
+#section-location .about-moviflor .text-and-icon p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 28px;
     color: #343434;
     padding: 0;
     margin: 0;
 }
-#section-location .about-moviflor .text-icon a {
+#section-location .about-moviflor .text-and-icon a {
     text-decoration: none;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #80808050;
 }
 .main-footer {
     max-width: 100%;
@@ -774,6 +793,24 @@
         font-weight: bold;
         text-shadow: 0px 0px 8px rgba(0, 0, 0, .4);
     }
+    #section-products .products-container .products:nth-child(3) {
+        display: none;
+    }
+    #section-testimony .peoples .person {
+        justify-content: flex-start;
+    }
+    #section-testimony .peoples .person .profile-image {
+        width: 44px;
+        height: 44px;
+        margin-right: 5%;
+        /* border: 1px solid; */
+    }
+    #section-testimony .peoples .person .username-comment .username {
+        font-size: 15px;
+    }
+    #section-testimony .peoples .person .username-comment .comment {
+        font-size: 14px;
+    }
 }
 @media screen and (max-width:885px) {
     /*section header */
@@ -838,6 +875,123 @@
     #section-portfolio .image-collection {
         height: 300px;
     }
+    #section-testimony .facebook-likes-info .text {
+        font-size: 13px;
+    }
+    #section-location .map-container .map-header {
+        padding: 32px 69px 31px;
+    }
+    #section-location .map-container .map-header .text-and-icon .text p {
+        font-size: 14px;
+    }
+    #section-location .map-container .map-header .text-and-icon .text h1 {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 741px) {
+    #section-products .products-container .products:nth-child(2) {
+        display: none;
+    }
+    #section-testimony {
+        padding: 36px 30px 35px;
+    }
+    #section-testimony .facebook-likes-info .text {
+        font-size: 12px;
+    }
+    #section-testimony .peoples .person .username-comment {
+        width: 106px;
+    }
+    #section-testimony .peoples .person .username-comment .username {
+        height: 20px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    #section-testimony .peoples .person .username-comment .comment {
+        font-size: 11px;
+    }
+    #section-testimony .facebook-likes-info .text p {
+        width: 200px;
+    }
+
+    #section-location .map-container {
+        background-position: 24%;
+    }
+}
+@media screen and (max-width: 425px) {
+    #section-location {
+        height: 427px;
+        /* border: 1px solid green; */
+    }
+    #section-location .map-container {
+        height: 326px;
+        background-position: 24% 60px;
+    }
+    #section-location .map-container .map-header {
+        height: 90px;
+        padding: 10px 30px;
+    }
+    #section-location .map-container .map-header .text-and-icon {
+        justify-content: flex-start;
+    }
+    #section-location .map-container .map-header .text-and-icon .iconify {
+        font-size: 36px;
+        margin-right: 5%;
+    }
+    #section-location .about-moviflor {
+        /* display: none; */
+        padding: 21px 20px 39px;
+    }
+    #section-location .about-moviflor .text-and-icon {
+        height: 70px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #section-location .about-moviflor .text-and-icon .icon {
+        width: 90px;
+        height: 33px;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+    #section-location .about-moviflor .text-and-icon p {
+        width: 180px;
+        height: 70px;
+        font-size: 12px;
+        line-height: 17px;
+        overflow: hidden;
+    }
+    #section-location .about-moviflor .text-and-icon a {
+        padding: 1px;
+    }
+}
+@media screen and (max-width: 388px) {
+    #section-testimony .facebook-likes-info .text p {
+        display: none;
+    }
+    #section-location .about-moviflor .text-and-icon p {
+        font-size: 13px;
+        line-height: initial;
+    }
+}
+@media screen and (max-width: 360px) {
+    #section-header,
+    #section-portfolio,
+    #section-products,
+    #section-testimony,
+    #section-location {
+        width: 328px;
+    }
+    #section-portfolio,
+    #section-products,
+    #section-testimony,
+    #section-location {
+        margin: 0px 25px 60px;
+    }
+    #section-header {
+        margin-left: 25px;
+    }
 }
 @media screen and (max-width: 320px) {
     #section-portfolio #soluctions {
@@ -854,5 +1008,38 @@
     }
     #section-portfolio #soluctions li .icons-and-buttons .iconify {
         font-size: 30px;
+    }
+    #section-testimony {
+        padding: 36px 30px 35px;
+    }
+    #section-testimony .peoples .person .username-comment {
+        width: 106px;
+    }
+    #section-testimony .peoples .person .username-comment .username {
+        height: 30px;
+        font-size: 13px;
+    }
+    #section-testimony .peoples .person .username-comment .comment {
+        font-size: 10px;
+    }
+
+
+    /* section map */
+    #section-location .map-container {
+        background-position: 28%;
+        background-position: 24% 40px;
+    }
+    #section-location .map-container .map-header {
+        padding: 10px 30px;
+    }
+    #section-location .map-container .map-header .text-and-icon .text p {
+        font-size: 14px;
+    }
+    #section-location .map-container .map-header .text-and-icon .text h1 {
+        font-size: 14px;
+    }
+    #section-location .map-container .map-header .text-and-icon .iconify {
+        font-size: 33px;
+        margin-right: 5%;
     }
 }

@@ -108,7 +108,7 @@ button {
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    top: 0;
+    /* top: 0; */
     left: 0;
     bottom: 0;
     overflow: auto;
@@ -119,7 +119,7 @@ button {
 }
 /* lista de icone */
 .side-nav #side-nav--item-container {
-    height: 317px;
+    height: 377px;
     list-style: none;
     padding: 0 9px;
     overflow: auto;
@@ -129,6 +129,9 @@ button {
 /* icone */
 .side-nav #side-nav--item-container > li {
     padding: 22px 0;
+}
+.side-nav #side-nav--item-container > .actived-list-item a {
+    color: #00c24e;
 }
 .side-nav #side-nav--item-container li div, .side-nav #side-nav--item-container li div > a {
     display: flex;
