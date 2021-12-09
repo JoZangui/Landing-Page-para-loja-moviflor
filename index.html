@@ -321,7 +321,9 @@
                     <img src="images/Moviflor-self_logo.png" alt="">
                 </div>
                 <p>
-                    oferecemos aos nossos clientes os melhores produtos ao melhor preço, <a href="#" target="blank">visite-nos <i class="iconify" data-icon="bi:box-arrow-up-right"></i></a>
+                    oferecemos aos nossos clientes os melhores produtos ao melhor preço, 
+                    <!-- link to google maps with moviflor location -->
+                    <a href="#" target="blank">visite-nos <i class="iconify" data-icon="bi:box-arrow-up-right"></i></a>
                 </p>
             </div>
         </div>
@@ -339,13 +341,13 @@
                 <li><a href="#">Onde estamos</a></li>
             </ul>
             <ul class="servicos">
-                <li class="list-title">Serviços</li>
+                <li class="list-title">Serviços :</li>
                 <li><a href="#">Entrega e montagem</a></li>
                 <li><a href="#">Gabinete de decoração</a></li>
                 <li><a href="#">Serviço dedicado a empresas</a></li>
             </ul>
             <ul>
-                <li class="list-title">Moviflor Newsletter</li>
+                <li class="list-title">Moviflor Newsletter :</li>
                 <li>Assine a nossa newsletter para receber as ultimas novidades a tempo e horas</a></li>
                 <li id="footer-newsletter-form">
                     <form action="" method="post">
@@ -356,14 +358,15 @@
             </ul>
         </div>
         <div class="credits-container">
-            <div id="credits-title-bar">
-                <p>imagens by: <span>pexels.com</span> & <span>pngwing.com</span></p>
+            <div id="credits-title-bar"  onclick="showCredits()">
+                <p><span>imagens JPG by:</span> pexels.com</p>
                 <i class="iconify credits-arrow" data-icon="dashicons:arrow-up-alt2" data-flip="horizontal"></i>
+                <p><span>imagens PNG by: </span>pngwing.com</p>
             </div>
-            <div id="credit list">
+            <div id="credit-list">
                 <!-- pexels credits -->
                 <ul>
-                    <li><span>Fotos by:</span> Jason Boyd from Pexels</li>
+                    <li><span>Fotos by: <br> </span> Jason Boyd from Pexels</li>
                     <li> Max Vakhtbovych from Pexels</li>
                     <li> Jean van der Meulen from Pexels</li>
                     <li> iSAW Company from Pexels</li>
@@ -378,8 +381,21 @@
             </div>
         </div>
     </footer>
+    <footer class="subfooter">
+        <div id="content">
+            <p> Copyright &copy; Moviflor <a href="#">Ficha técnica</a> | <a href="#">Mapa do Site</a></p>
+            <div id="social-media-icons">
+                <a href="facebook/#"><i class="iconify" data-icon="foundation:social-facebook"></i></a>
+                <a href="twitter/#"><i class="iconify" data-icon="foundation:social-twitter"></i></a>
+                <a href="instagram/#"><i class="iconify" data-icon="simple-line-icons:social-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
     <div class="bottom-menu">
         <ul>
+            <li>
+                <img src="images/moviflor-logo-for-bottom-menu.png" alt="Moviflor-icon">
+            </li>
             <li>
                 <a href="#">
                     <i class="iconify" data-icon="cil:sofa" data-flip="horizontal"></i>
@@ -402,18 +418,15 @@
             </li>
         </ul>
     </div>
-    <footer class="subfooter">
-        <div id="content">
-            <p> Copyright &copy; Moviflor <a href="#">Ficha técnica</a> | <a href="#">Mapa do Site</a></p>
-            <div id="social-media-icons">
-                <a href="facebook/#"><i class="iconify" data-icon="foundation:social-facebook"></i></a>
-                <a href="twitter/#"><i class="iconify" data-icon="foundation:social-twitter"></i></a>
-                <a href="instagram/#"><i class="iconify" data-icon="simple-line-icons:social-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
     <script src="js/script.js"></script>
     <!-- iconify CDN -->
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script>
+        const creditsContainer = document.querySelector('.credits-container');
+        
+        function showCredits() {
+            creditsContainer.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>

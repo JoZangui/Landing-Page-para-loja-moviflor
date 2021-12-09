@@ -208,7 +208,7 @@ button {
     display: none;
 }
 .side-nav.close #side-nav--item-container li:hover > div a{
-    background-color: #00c24e;
+    color: #003E19;
 }
 .side-nav.close #side-nav--item-container li div .arrow {
     display: none;
@@ -305,6 +305,15 @@ button {
         padding: 0;
         /* border: 1px solid; */
         overflow: hidden;
+    }
+    .bottom-menu ul li:first-child {
+        width: 26px;
+        height: 26px;
+        /* border: 1px solid; */
+        overflow-y: hidden;
+    }
+    .bottom-menu ul li:first-child img {
+        width: 100%;
     }
     .bottom-menu ul li a {
         font-size: 26px;

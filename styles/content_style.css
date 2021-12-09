@@ -485,20 +485,24 @@
 }
 .main-footer {
     max-width: 100%;
-    height: 220px;
+    height: 270px;
+    position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    box-sizing: border-box;
     background-color: #025725;
 }
 .main-footer .footer-info {
     width: 100%;
-    height: 200px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 20px 111px 26px 191px;
+    padding: 20px 10% 26px 15%;
     box-sizing: border-box;
-    /* border: 1px solid; */
     overflow: hidden;
 }
 .main-footer .footer-info ul {
@@ -558,25 +562,27 @@
 .main-footer .credits-container {
     width: 100%;
     height: 20px;
-    position: relative;
+    position: absolute;
     bottom: 0;
-    padding-left: 191px;
     z-index: 2;
     transition: height .2s ease-out;
     overflow: hidden;
     background-color: #003E19;
 }
 .main-footer .credits-container.open {
-    height: 100%;
+    height: 70%;
 }
 .main-footer .credits-container #credits-title-bar {
-    width: 540px;
+    max-width: 100%;
     height: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
     color: #ffff;
+    padding: 0 15%;
+    box-sizing: border-box;
+    background-color: #003515;
 }
 .main-footer .credits-container.open #credits-title-bar .credits-arrow {
     transform: rotate(-180deg);
@@ -587,18 +593,22 @@
 .main-footer .credits-container #credits-title-bar p {
     margin: 0;
     padding: 0;
-    font-weight: 300;
-}
-.main-footer .credits-container #credits-title-bar span {
     font-weight: bold;
+}
+.main-footer .credits-container #credits-title-bar p span {
+    font-weight: 300;
 }
 .main-footer .credits-container #credits-title-bar .iconify {
     font-size: 24px;
 }
+.main-footer #credit-list {
+    padding: 0 15%;
+}
 .main-footer .credits-container ul {
-    width: 1045px;
-    height: 30px;
+    width: 100%;
+    height: 200px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     font-size: 12px;
     color: #ffff;
@@ -606,6 +616,8 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+    /* border: 1px solid; */
+    overflow-y: auto;
 }
 .main-footer .credits-container ul li {
     margin-top: 12px;
@@ -614,19 +626,19 @@
     font-weight: 600;
 }
 .subfooter {
-    max-width: 100%;
+    width: 100%;
     height: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     bottom: 0;
-    padding: 0 191px;
+    /* padding: 0 191px; */
     overflow: hidden;
     background-color: #222222;
 }
 .subfooter #content {
-    width: 1057px;
+    width: 100%;
     height: 15px;
     display: flex;
     justify-content: space-between;
@@ -811,6 +823,10 @@
     #section-testimony .peoples .person .username-comment .comment {
         font-size: 14px;
     }
+    .main-footer .footer-info ul li,
+    .main-footer .footer-info ul li a {
+        font-size: 12px;
+    }
 }
 @media screen and (max-width:885px) {
     /*section header */
@@ -887,6 +903,22 @@
     #section-location .map-container .map-header .text-and-icon .text h1 {
         font-size: 17px;
     }
+    .main-footer {
+        height: 600px;
+    }
+    .main-footer .footer-info,
+    .main-footer .credits-container ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .main-footer .credits-container.open {
+        height: 50%;
+    }
+    .subfooter {
+        margin-bottom: 50px;
+    }
 }
 @media screen and (max-width: 741px) {
     #section-products .products-container .products:nth-child(2) {
@@ -914,9 +946,13 @@
     #section-testimony .facebook-likes-info .text p {
         width: 200px;
     }
-
+    
     #section-location .map-container {
         background-position: 24%;
+    }
+
+    .main-footer .credits-container #credits-title-bar p span {
+        display: none;
     }
 }
 @media screen and (max-width: 425px) {
@@ -973,6 +1009,13 @@
     #section-location .about-moviflor .text-and-icon p {
         font-size: 13px;
         line-height: initial;
+    }
+}
+@media screen and (max-width: 380px) {
+    .subfooter,
+    .main-footer {
+        max-width: none;
+        width: 383px;
     }
 }
 @media screen and (max-width: 360px) {
