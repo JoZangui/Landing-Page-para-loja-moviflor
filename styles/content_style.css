@@ -638,11 +638,12 @@
     background-color: #222222;
 }
 .subfooter #content {
-    width: 100%;
+    width: 80%;
     height: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 15%;
     overflow: hidden;
 }
 .subfooter #content p, .subfooter #content a {
@@ -918,6 +919,10 @@
     }
     .subfooter {
         margin-bottom: 50px;
+    }
+    .subfooter #content {
+        width: 100%;
+        margin: 0;
     }
 }
 @media screen and (max-width: 741px) {
