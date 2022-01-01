@@ -1,5 +1,5 @@
-let arrow = document.querySelectorAll(".arrow");
-let lines = document.querySelector('.lines');
+const arrow = document.querySelectorAll(".arrow");
+const lines = document.querySelector('.lines');
         
 for (let i = 0; i < arrow.length; i++) {
     arrow[i].addEventListener("click", (e)=>{
@@ -8,18 +8,24 @@ for (let i = 0; i < arrow.length; i++) {
     });
 }
 
-let sidebar = document.querySelector(".side-nav.close");
-let menuIcon = document.querySelector(".menu-icon");
-// console.log(menuIcon);
+const sidebar = document.querySelector(".side-nav");
+const menuIcon = document.querySelector(".menu-icon");
 
-menuIcon.addEventListener('click', ()=> {
-    sidebar.classList.toggle('close')
-    if (lines.getAttribute('d') == "M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z") {
-        lines.setAttribute('d', "M4 11h16v2H4zm0-5h16v2H4zm0 12h16.235v-2H4z")
-    } else {
-        lines.setAttribute('d', "M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z")
+menuIcon.addEventListener('click', function() {
+    sidebar.classList.toggle('close');
+    this.classList.toggle('actived-pin');
+});
+
+sidebar.addEventListener('mouseover', function() {
+    if(!menuIcon.classList.contains('actived-pin')) {
+        this.classList.remove('close');
     }
-})
+});
+sidebar.addEventListener('mouseout', function() {
+    if(!menuIcon.classList.contains('actived-pin')) {
+        this.classList.add('close');
+    }
+});
 
 // change image collection
 let imageIndex = 0

@@ -15,12 +15,13 @@
 }
 #section-header {
     height: 459px;
+    position: relative;
     margin: 141px 9.9% 32px;
     overflow: hidden;
     box-sizing: border-box;
-    background: url("../images/pexels-jason-boyd-3209045.jpg");
+    background-color: #e2e2e2;
 }
-#section-header, .portfolio-info-container {
+.portfolio-info-container {
     /* width: 100%; */
     overflow: hidden;
     box-sizing: border-box;
@@ -30,11 +31,34 @@
 }
 #section-header .info {
     height: 459px;
+    position: absolute;
     padding: 55px 134px 0px 60px;
     justify-content: space-around;
+    z-index: 2;
 }
 #section-header .info .text {
     width: 456px;
+    position: relative;
+}
+.header-title-container {
+    height: 50px;
+    overflow: hidden;
+}
+.header-paragraph-container {
+    height: 100px;
+    overflow: hidden;
+}
+#section-header .info .text p {
+    height: 100px;
+    overflow: hidden;
+}
+#section-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -o-object-fit: cover;
+    -o-object-position: center;
 }
 .info {
     width: 46.8%;
@@ -42,18 +66,15 @@
     flex-direction: column;
     overflow: hidden;
     box-sizing: border-box;
-    /* border: 1px solid red; */
     background-color: #ffff;
 }
 .info .text {
     height: 286px;
-    /* border: 1px solid; */
     box-sizing: border-box;
 }
 .info .text div {
     display: flex;
     box-sizing: border-box;
-    /* border: 1px solid; */
 }
 .info .text div > h1 {
     width: 450px;
@@ -62,7 +83,6 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #003E19;
-    /* border: 1px solid; */
     overflow: hidden;
 }
 .info .text div > a {
@@ -74,6 +94,7 @@
     border-radius: 4px;
     padding: 7px 20px;
     box-sizing: border-box;
+    transition: .2s ease-in;
     background-color: #003E19;
 }
 .info .text div > i {
@@ -84,7 +105,6 @@
     line-height: 24px;
     color: #343434;
     margin-top: 24px;
-    /* border: 1px solid; */
 }
 .info .text > a {
     display: inline-block;
@@ -101,12 +121,6 @@
 }
 .info .carousel-dots-container {
     width: 141px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* margin: 94px 0 0px; */
-    /* transform: translateY(44px); */
     box-sizing: border-box;
 }
 .info .carousel-dots-container .dots {
@@ -114,17 +128,9 @@
     align-items: center;
 }
 .info .carousel-dots-container .dots .dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
-    transition: background-color .2s ease-out;
-    background-color: #C4C4C4;
-}
-.info .carousel-dots-container .dots .dot:nth-child(2) {
-    margin: 0 10px;
-}
-.info .carousel-dots-container .dots .dot.active {
-    background-color: #025725;
+    width: calc(141px/3);
+    height: 7px;
+    background-color: #c5c5c5;
 }
 #section-portfolio {
     /* height: 1989px;  */
@@ -278,19 +284,20 @@
     margin: 0;
     padding: 0;
 }
-#section-products button {
-    width: 95px;
-    height: 32px;
+#section-products a {
+    /* width: 95px; */
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+    text-decoration: none;
     color: #003E19;
     padding: 7px 26px;
     border: 1px solid #003E19;
     border-radius: 4px;
     background-color: #ffff;
+    transition: background .2s ease-out;
 }
-#section-products button:hover {
+#section-products a:hover {
     color: #ffff;
     background-color: #003E19;
 }
@@ -323,7 +330,11 @@
     overflow: hidden;
 }
 #section-products .products-container .products .products-images img {
-    width: 100%;
+    max-width: 284px;
+    max-height: 282px;
+    object-fit: contain;
+    object-position: center;
+    /* border: 1px solid; */
 }
 #section-products .products-container .products:first-child .products-images,
 #section-products .products-container .products:last-child .products-images {
@@ -827,9 +838,6 @@
     .main-footer .footer-info ul li a {
         font-size: 12px;
     }
-}
-@media screen and (max-width: 1024px) and (min-height: 1366px) {
-    
 }
 @media screen and (max-width:885px) {
     /*section header */

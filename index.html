@@ -9,6 +9,7 @@
     <!-- meus css -->
     <link rel="stylesheet" href="styles/menu_style.css">
     <link rel="stylesheet" href="styles/content_style.css">
+    <link rel="stylesheet" href="styles/slide_image.css">
     <title>Home</title>
 </head>
 <body>
@@ -16,9 +17,7 @@
     <nav class="top-nav">
         <!-- Hamburger button icon -->
         <div class="menu-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
-                <path class="lines" d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
-            </svg>
+            <i class="iconify" data-icon="bi:pin-angle"></i>
         </div>
         <div id="topnav-itens-container">
             <!-- moviflor logo -->
@@ -45,7 +44,7 @@
             <li class="actived-list-item">
                 <div>
                     <a href="#">
-                        <i class="iconify" data-icon="jam:home-f"></i>
+                        <i class="iconify" data-icon="jam:home"></i>
                         <span class="link-name">Home</span>
                     </a>
                 </div>
@@ -128,23 +127,48 @@
     <section id="section-header">
         <div class="info">
             <div class="text">
-                <div>
-                    <h1>
+                <div class="header-title-container">
+                    <h1 class="header-title">
                         Bem-vindo(a) à Moviflor
+                    </h1>
+                    <h1 class="header-title">
+                        Lazer e trabalho
+                    </h1>
+                    <h1 class="header-title">
+                        Um tempo de qualidade
+                    </h1>
+                    <h1 class="header-title">
+                        O momento com a família
+                    </h1>
+                    <h1 class="header-title">
+                        Cozinhar em grande estilo
                     </h1>
                     <!-- <i class='bx bx-chevron-down arrow' id="header-section-arrow"></i> -->
                 </div>
-                <p>O seu doce lar merece todo o cuidado com aquele toque especial que só você sabe dar, e com aquela forcinha da Moviflor fica ainda melhor</p>
-                <a href="#">Ver mais</a>
+                <div class="header-paragraph-container">
+                    <p class="header-paragraph">O seu doce lar merece todo o cuidado com aquele toque especial que só você sabe dar, e com aquela forcinha da Moviflor fica ainda melhor</p>
+                    <p class="header-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum distinctio numquam eos doloremque debitis nam aliquid, cumque perspiciatis qui explicabo iure quaerat labore architecto quasi alias odio quo veniam a?</p>
+                    <p class="header-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus cum voluptate, consequuntur dolore nesciunt quod perferendis ea magnam. Sunt adipisci quam odio eveniet praesentium molestias omnis amet ad. Quibusdam, odit?</p>
+                    <p class="header-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus adipisci aspernatur quod dignissimos labore. Omnis iure optio sit ut incidunt natus, velit numquam nemo corporis expedita dignissimos quos, reiciendis ullam.</p>
+                    <p class="header-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo dolores perferendis vitae numquam esse commodi consequatur ipsa earum itaque iste iusto, praesentium accusamus minus ratione libero. Reprehenderit, placeat quo?</p>
+                </div>
+                <a href="#">ver mais</a>
             </div>
             <div class="carousel-dots-container">
                 <div class="dots">
                     <span class="dot"></span>
-                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                     <span class="dot"></span>
                 </div>
             </div>
         </div>
+        <img src="images/pexels-huseyn-kamaladdin-667838.jpg" class="header-image">
+        <img src="images/pexels-emre-can-acer-2079246.jpg" class="header-image">
+        <img src="images/pexels-jason-boyd-3209045.jpg" class="header-image">
+        <img src="images/pexels-mark-mccammon-1080721.jpg" class="header-image">
+        <img src="images/pexels-designecologist-1005058.jpg" class="header-image">
     </section>
     <section id="section-portfolio">
         <ul id="soluctions">
@@ -155,7 +179,7 @@
                 </div>
                 <div class="icons-and-buttons">
                     <i class="iconify" data-icon="mdi:sofa-outline" data-flip="horizontal"></i>
-                    <button>Ver artigos</button>
+                    <button>ver categoria</button>
                 </div>
             </li>
             <li>
@@ -165,7 +189,7 @@
                 </div>
                 <div class="icons-and-buttons">
                     <i class="iconify" data-icon="mdi:string-lights"></i>
-                    <button>Ver artigos</button>
+                    <button>ver categoria</button>
                 </div>
             </li>
             <li>
@@ -175,7 +199,7 @@
                 </div>
                 <div class="icons-and-buttons">
                     <i class="iconify" data-icon="icons8:bed"  data-flip="horizontal"></i>
-                    <button>Ver artigos</button>
+                    <button>ver categoria</button>
                 </div>
             </li>
         </ul>
@@ -223,7 +247,7 @@
             </div>
             <div class="products">
                 <div class="products-images">
-                    <img src="images/pngwing_com_2.png" alt="">
+                    <img src="images/pngwing_com_12.png" alt="">
                 </div>
             </div>
             <div class="products">
@@ -232,7 +256,7 @@
                 </div>
             </div>
         </div>
-        <button>Todos</button>
+        <a href="#">ir para artigo</a>
     </section>
     <section id="section-testimony">
         <div class="facebook-likes-info">
@@ -373,10 +397,10 @@
                     <li> Element5 Digital from Pexels</li>
                     <li> Marta Dzedyshko from Pexels</li>
                     <li> Medhat Ayad from Pexels</li>
-                </ul>
-                <!-- pngwing -->
-                <ul>
-                    <li></li>
+                    <li>Designecologist no Pexels</li>
+                    <li>Emre Can Acer no Pexels</li>
+                    <li>Huseyn Kamaladdin no Pexels</li>
+                    <li>Mark McCammon no Pexels</li>
                 </ul>
             </div>
         </div>
@@ -395,7 +419,7 @@
         <ul>
             <li class="actived-list-item">
                 <a href="#">
-                    <i class="iconify" data-icon="jam:home-f"></i>
+                    <i class="iconify" data-icon="jam:home"></i>
                 </a>
             </li>
             <li>
