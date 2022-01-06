@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- boxicons CDN -->
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
-    <!-- meus css -->
+    <!-- my css -->
     <link rel="stylesheet" href="styles/menu_style.css">
-    <link rel="stylesheet" href="styles/content_style.css">
-    <link rel="stylesheet" href="styles/slide_image.css">
+    <link rel="stylesheet" href="styles/content_style.css"> <!-- main content style -->
+    <link rel="stylesheet" href="styles/slide_image.css"> <!-- slide animation -->
     <title>Home</title>
 </head>
 <body>
     <!-- top nav -->
     <nav class="top-nav">
-        <!-- Hamburger button icon -->
+        <!-- pin button icon -->
         <div class="menu-icon">
             <i class="iconify" data-icon="bi:pin-angle"></i>
         </div>
+
         <div id="topnav-itens-container">
             <!-- moviflor logo -->
             <div id="logo">
@@ -32,8 +33,11 @@
                     <button><i class='bx bx-search-alt-2'></i></button>
                 </form>
             </div>
+
             <!-- shopping cart -->
-            <a href="#" title="ver seu carrinho" ><i class="iconify shopping-cart" data-icon="carbon:shopping-cart" data-flip="horizontal"></i></a>
+            <a href="#" title="ver seu carrinho" >
+                <i class="iconify shopping-cart" data-icon="carbon:shopping-cart" data-flip="horizontal"></i>
+            </a>
         </div>
     </nav>
     
@@ -126,7 +130,9 @@
     <!-- site header -->
     <section id="section-header">
         <div class="info">
+            <!-- header texts -->
             <div class="text">
+                <!-- titles -->
                 <div class="header-title-container">
                     <h1 class="header-title">
                         Bem-vindo(a) à Moviflor
@@ -143,15 +149,26 @@
                     <h1 class="header-title">
                         Cozinhar em grande estilo
                     </h1>
-                    <!-- <i class='bx bx-chevron-down arrow' id="header-section-arrow"></i> -->
                 </div>
+                <!-- paragraphs -->
                 <div class="header-paragraph-container">
-                    <p class="header-paragraph">O seu doce lar merece todo o cuidado com aquele toque especial que só você sabe dar, e com aquela forcinha da Moviflor fica ainda melhor</p>
-                    <p class="header-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum distinctio numquam eos doloremque debitis nam aliquid, cumque perspiciatis qui explicabo iure quaerat labore architecto quasi alias odio quo veniam a?</p>
-                    <p class="header-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus cum voluptate, consequuntur dolore nesciunt quod perferendis ea magnam. Sunt adipisci quam odio eveniet praesentium molestias omnis amet ad. Quibusdam, odit?</p>
-                    <p class="header-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus adipisci aspernatur quod dignissimos labore. Omnis iure optio sit ut incidunt natus, velit numquam nemo corporis expedita dignissimos quos, reiciendis ullam.</p>
-                    <p class="header-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo dolores perferendis vitae numquam esse commodi consequatur ipsa earum itaque iste iusto, praesentium accusamus minus ratione libero. Reprehenderit, placeat quo?</p>
+                    <p class="header-paragraph">
+                        O seu doce lar merece todo o cuidado com aquele toque especial que só você sabe dar, e com aquela forcinha da Moviflor fica ainda melhor
+                    </p>
+                    <p class="header-paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum distinctio numquam eos doloremque debitis nam aliquid, cumque perspiciatis qui explicabo iure quaerat labore architecto quasi alias odio quo veniam a?
+                    </p>
+                    <p class="header-paragraph">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus cum voluptate, consequuntur dolore nesciunt quod perferendis ea magnam. Sunt adipisci quam odio eveniet praesentium molestias omnis amet ad. Quibusdam, odit?
+                    </p>
+                    <p class="header-paragraph">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus adipisci aspernatur quod dignissimos labore. Omnis iure optio sit ut incidunt natus, velit numquam nemo corporis expedita dignissimos quos, reiciendis ullam.
+                    </p>
+                    <p class="header-paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo dolores perferendis vitae numquam esse commodi consequatur ipsa earum itaque iste iusto, praesentium accusamus minus ratione libero. Reprehenderit, placeat quo?
+                    </p>
                 </div>
+                <!-- button -->
                 <a href="#">ver mais</a>
             </div>
             <div class="carousel-dots-container">
@@ -164,12 +181,20 @@
                 </div>
             </div>
         </div>
+        <!-- slide images -->
         <img src="images/pexels-huseyn-kamaladdin-667838.jpg" class="header-image">
         <img src="images/pexels-emre-can-acer-2079246.jpg" class="header-image">
         <img src="images/pexels-jason-boyd-3209045.jpg" class="header-image">
         <img src="images/pexels-mark-mccammon-1080721.jpg" class="header-image">
         <img src="images/pexels-designecologist-1005058.jpg" class="header-image">
     </section>
+
+    <!--
+        container for:
+            soluctions
+            portfolio info
+            portfolio images
+    -->
     <section id="section-portfolio">
         <ul id="soluctions">
             <li>
@@ -179,7 +204,10 @@
                 </div>
                 <div class="icons-and-buttons">
                     <i class="iconify" data-icon="mdi:sofa-outline" data-flip="horizontal"></i>
-                    <button>ver categoria</button>
+                    <!-- button -->
+                    <a href="#">
+                        ver categoria
+                    </a>
                 </div>
             </li>
             <li>
@@ -189,7 +217,10 @@
                 </div>
                 <div class="icons-and-buttons">
                     <i class="iconify" data-icon="mdi:string-lights"></i>
-                    <button>ver categoria</button>
+                    <!-- button -->
+                    <a href="#">
+                        ver categoria
+                    </a>
                 </div>
             </li>
             <li>
@@ -199,7 +230,10 @@
                 </div>
                 <div class="icons-and-buttons">
                     <i class="iconify" data-icon="icons8:bed"  data-flip="horizontal"></i>
-                    <button>ver categoria</button>
+                    <!-- button -->
+                    <a href="#">
+                        ver categoria
+                    </a>
                 </div>
             </li>
         </ul>
@@ -209,7 +243,10 @@
                     <div>
                         <h1>Tudo para si e a sua família</h1>
                     </div>
-                    <p>Encontre o melhor para si e a sua família, dê aos seus o melhor conforto possível pelo melhor preço</p>
+                    <p>
+                        Encontre o melhor para si e a sua família,
+                        dê aos seus o melhor conforto possível pelo melhor preço
+                    </p>
                 </div>
                 <div class="icons">
                     <i class="iconify" data-icon="mdi:sofa-outline"></i>
@@ -219,6 +256,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- images container for large screens -->
         <div id="portfolios-images">
             <div class="images" style="background-image: url('images/pexels-jean-van-der-meulen-1457844.jpg');">
             </div>
@@ -231,12 +270,20 @@
             <div class="images" style="background-image: url('images/pexels-medhat-ayad-383568.jpg');">
             </div>
         </div>
+
+        <!--
+            image container for small screens
+            ------------------------
+            Images are added by js (script.js)
+        -->
         <div class="image-collection">
             <span class="arrow" id="left-arrow">&#8592;</span>
             <span id="image-number"></span>
             <span class="arrow" id="right-arrow">&#8594;</span>
         </div>
     </section>
+
+    <!-- products images -->
     <section id="section-products">
         <h1>Artigos</h1>
         <div class="products-container">
@@ -256,8 +303,11 @@
                 </div>
             </div>
         </div>
+        <!-- button -->
         <a href="#">ir para artigo</a>
     </section>
+
+    <!-- customer testimony -->
     <section id="section-testimony">
         <div class="facebook-likes-info">
             <div class="facebook-icon">
@@ -326,7 +376,7 @@
         </div>
     </section>
     <section id="section-location">
-        <div class="map-container">
+        <div class="map-container"> <!-- Images are added by css (content_style.css) -->
             <div class="map-header">
                 <div class="text-and-icon">
                     <i class="iconify" data-icon="icon-park-outline:local-two"></i>
@@ -353,7 +403,7 @@
         </div>
     </section>
     <footer class="main-footer">
-        <div class="footer-info">
+        <div class="footer-info"> <!-- main footer content -->
             <ul class="moviflor">
                 <li class="list-title">
                     <img src="images/footer-moviflor-icon.png" alt="">

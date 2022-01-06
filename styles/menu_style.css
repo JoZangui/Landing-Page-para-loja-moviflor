@@ -142,7 +142,7 @@ button {
     transition: color .2s ease-in-out;
 }
 .side-nav #side-nav--item-container > .actived-list-item a,
-.side-nav #side-nav--item-container > .actived-list-item a:hover {
+.side-nav #side-nav--item-container > .actived-list-item:hover a {
     color: #003E19;
     opacity: 1;
 }

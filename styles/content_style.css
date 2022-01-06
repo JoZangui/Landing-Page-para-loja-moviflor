@@ -133,7 +133,6 @@
     background-color: #c5c5c5;
 }
 #section-portfolio {
-    /* height: 1989px;  */
     box-sizing: border-box;
     background-color: #ffff;
     overflow: hidden;
@@ -202,19 +201,20 @@
     font-size: 46px;
     color: #003E19;
 }
-#section-portfolio #soluctions li .icons-and-buttons button {
-    width: 95px;
-    height: 32px;
+#section-portfolio #soluctions li .icons-and-buttons a {
     font-weight: bold;
+    font-size: small;
     text-align: center;
+    text-decoration: none;
     color: #ffff;
+    padding: 7px;
     border-radius: 6px;
     transition: opacity .2s ease-out .2s;
     cursor: pointer;
     opacity: 0;
     background-color: #003E19;
 }
-#section-portfolio #soluctions li:hover > .icons-and-buttons button {
+#section-portfolio #soluctions li:hover > .icons-and-buttons a {
     opacity: 1;
 }
 #section-portfolio .portfolio-info-container {
@@ -759,7 +759,7 @@
     #section-portfolio #soluctions li .icons-and-buttons .iconify {
         font-size: 36px;
     }
-    #section-portfolio #soluctions li .icons-and-buttons button {
+    #section-portfolio #soluctions li .icons-and-buttons a {
         display: none;
     }
     #section-portfolio .portfolio-info-container .info .text {
