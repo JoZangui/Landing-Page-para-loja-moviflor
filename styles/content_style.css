@@ -22,7 +22,6 @@
     background-color: #e2e2e2;
 }
 .portfolio-info-container {
-    /* width: 100%; */
     overflow: hidden;
     box-sizing: border-box;
     background-repeat: no-repeat;
@@ -339,6 +338,10 @@
 #section-products .products-container .products:first-child .products-images,
 #section-products .products-container .products:last-child .products-images {
     max-width: 303px;
+}
+.products-images .product-image {
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
 }
 #section-testimony {
     height: 382px;

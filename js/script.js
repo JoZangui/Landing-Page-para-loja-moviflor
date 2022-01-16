@@ -69,3 +69,42 @@ rightArrow.addEventListener('click', _=> {
 
     imageNumber.innerHTML = (imageIndex + 1).toString() + '/' + images.length.toString();
 });
+
+// products images show
+const productImage = document.querySelectorAll(".product-image");
+let i = 0;
+let productImage_index;
+let selectedItem;
+let imagesList;
+
+// get images data
+const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {
+    let result = JSON.parse(this.responseText);
+    imagesList = result.images
+}
+xhttp.open("GET", "js/productsImages.json");
+xhttp.send();
+
+setInterval(() => {
+    if(i === imagesList.length) {i = 0}
+    
+    productImage_index = Math.floor(Math.random() * productImage.length)
+
+    
+    selectedItem = productImage[productImage_index];
+    
+    if(productImage[productImage_index].style.display !== "None") {
+        selectedItem.animate([
+            // keyframes
+            {opacity:0},
+            {opacity:1}
+        ], {
+            // timing options
+            duration: 1000
+        });
+        selectedItem.src = imagesList[i].toString();
+    }
+    selectedItem.classList.remove("opacity-animation");
+    i++;
+}, 4000);

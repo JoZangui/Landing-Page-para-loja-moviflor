@@ -2,7 +2,6 @@
     font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 *::-webkit-scrollbar-thumb {
-    /* border-radius: 20px; */
     background-color: #646464;
 }
 *::-webkit-scrollbar {
