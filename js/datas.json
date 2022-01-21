@@ -1,0 +1,24 @@
+{
+    "itemsImages": [
+        "images/pngwing_com.png",
+        "images/pngwing_com_2.png",
+        "images/pngwing_com_6.png",
+        "images/pngwing_com_7.png",
+        "images/pngwing_com_11.png",
+        "images/pngwing_com_12.png",
+        "images/pngwing_com_15.png",
+        "images/pngwing_com_16.png"
+    ],
+    "portfolioImages": [
+        "url('images/pexels-max-vakhtbovych-6538898.jpg')",
+        "url('images/pexels-max-vakhtbovych-6758773.jpg')",
+        "url('https://www.pexels.com/photo/white-bed-comforter-during-daytime-90317/')"
+    ],
+    "portfolioImagesCollection": [
+        "url(\"../images/pexels-element-digital-1125136.jpg\")",
+        "url(\"../images/pexels-isaw-company-945688.jpg\")",
+        "url(\"../images/pexels-jean-van-der-meulen-1457844.jpg\")",
+        "url(\"../images/pexels-medhat-ayad-383568.jpg\")",
+        "url(\"../images/pexels-marta-dzedyshko-2067638.jpg\")"
+    ]
+}

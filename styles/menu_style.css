@@ -29,12 +29,12 @@ button {
     z-index: 99;
     background-color: #ffff;
 }
-.top-nav .menu-icon > .iconify {
+.top-nav .pin-icon > .iconify {
     font-size: 24px;
     color: #646464;
     transition: transform .2s cubic-bezier(0.38, 0.29, 0.36, 1.32), color .9s;
 }
-.top-nav .menu-icon.actived-pin > .iconify {
+.top-nav .pin-icon.actived-pin > .iconify {
     color: #003E19; 
     transform: rotate(-45deg);
 }
@@ -251,7 +251,7 @@ button {
     }
 }
 @media screen and (max-width:885px) {
-    .menu-icon {
+    .pin-icon {
         display: none;
     }
     .side-nav {

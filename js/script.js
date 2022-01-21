@@ -1,33 +1,58 @@
-const arrow = document.querySelectorAll(".arrow");
-const lines = document.querySelector('.lines');
-        
-for (let i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e)=>{
-        let arrowParent = e.target.parentElement.parentElement;
-        arrowParent.classList.toggle("show-submenu");
+// get image lists
+const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {
+    let result = JSON.parse(this.responseText);
+    imagesList = result
+}
+xhttp.open("GET", "js/datas.json");
+xhttp.send();
+
+/* display and hidden the submenu */
+function showSubmenu() {
+    const arrow = document.querySelectorAll(".arrow");
+
+    for (let i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{
+            // The parent of the submenu and selected arrow
+            let submenuParent = e.target.parentElement.parentElement;
+            /* 
+                Adds or remove the show-submenu class(if the class already exist then remove, if not, add) to the parent of the selected submenu when clicking its arrow;
+                when it adds the class display the submenu and when it remove the class hides its submenu
+             */
+            submenuParent.classList.toggle("show-submenu");
+        });
+    }
+}
+
+/* pin, unpin, open and close de side nav */
+function openAndCloseSideNav () {
+    const sidebar = document.querySelector(".side-nav");
+    const pinIcon = document.querySelector(".pin-icon");
+    
+    // pin And Unpin side-nav
+    pinIcon.addEventListener('click', function() {
+        sidebar.classList.toggle('close');
+        this.classList.toggle('actived-pin');
+    });
+    // open side-nav
+    sidebar.addEventListener('mouseover', function() {
+        if(!pinIcon.classList.contains('actived-pin')) {
+            this.classList.remove('close');
+        }
+    });
+    // close side-nav
+    sidebar.addEventListener('mouseout', function() {
+        if(!pinIcon.classList.contains('actived-pin')) {
+            this.classList.add('close');
+        }
     });
 }
 
-const sidebar = document.querySelector(".side-nav");
-const menuIcon = document.querySelector(".menu-icon");
 
-menuIcon.addEventListener('click', function() {
-    sidebar.classList.toggle('close');
-    this.classList.toggle('actived-pin');
-});
+showSubmenu()
+openAndCloseSideNav();
 
-sidebar.addEventListener('mouseover', function() {
-    if(!menuIcon.classList.contains('actived-pin')) {
-        this.classList.remove('close');
-    }
-});
-sidebar.addEventListener('mouseout', function() {
-    if(!menuIcon.classList.contains('actived-pin')) {
-        this.classList.add('close');
-    }
-});
-
-// change image collection
+// change image collection (small screen)    
 let imageIndex = 0
 const rightArrow = document.querySelector('#right-arrow');
 const leftArrow = document.querySelector('#left-arrow');
@@ -69,7 +94,6 @@ rightArrow.addEventListener('click', _=> {
 
     imageNumber.innerHTML = (imageIndex + 1).toString() + '/' + images.length.toString();
 });
-
 // products images show
 const productImage = document.querySelectorAll(".product-image");
 let i = 0;
@@ -77,24 +101,15 @@ let productImage_index;
 let selectedItem;
 let imagesList;
 
-// get images data
-const xhttp = new XMLHttpRequest();
-xhttp.onload = function() {
-    let result = JSON.parse(this.responseText);
-    imagesList = result.images
-}
-xhttp.open("GET", "js/productsImages.json");
-xhttp.send();
-
 setInterval(() => {
-    if(i === imagesList.length) {i = 0}
+    if(i === imagesList.itemsImages.length) {i = 0}
     
     productImage_index = Math.floor(Math.random() * productImage.length)
 
     
     selectedItem = productImage[productImage_index];
     
-    if(productImage[productImage_index].style.display !== "None") {
+    if(selectedItem.style.display !== "None") {
         selectedItem.animate([
             // keyframes
             {opacity:0},
@@ -103,7 +118,7 @@ setInterval(() => {
             // timing options
             duration: 1000
         });
-        selectedItem.src = imagesList[i].toString();
+        selectedItem.src = imagesList.itemsImages[i].toString();
     }
     selectedItem.classList.remove("opacity-animation");
     i++;
