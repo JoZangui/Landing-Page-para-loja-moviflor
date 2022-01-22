@@ -1,14 +1,18 @@
 // get image lists
-const xhttp = new XMLHttpRequest();
-xhttp.onload = function() {
-    let result = JSON.parse(this.responseText);
-    imagesList = result
+const getItem = function(func) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        let result = JSON.parse(this.responseText);
+
+        // func(result) this enables external functions to work with the result
+        func(result)
+    }
+    xhttp.open("GET", "js/datas.json");
+    xhttp.send();
 }
-xhttp.open("GET", "js/datas.json");
-xhttp.send();
 
 /* display and hidden the submenu */
-function showSubmenu() {
+const showSubmenu = function() {
     const arrow = document.querySelectorAll(".arrow");
 
     for (let i = 0; i < arrow.length; i++) {
@@ -22,10 +26,10 @@ function showSubmenu() {
             submenuParent.classList.toggle("show-submenu");
         });
     }
-}
+}();
 
 /* pin, unpin, open and close de side nav */
-function openAndCloseSideNav () {
+const openAndCloseSideNav = function () {
     const sidebar = document.querySelector(".side-nav");
     const pinIcon = document.querySelector(".pin-icon");
     
@@ -46,80 +50,86 @@ function openAndCloseSideNav () {
             this.classList.add('close');
         }
     });
-}
+}();
 
-
-showSubmenu()
-openAndCloseSideNav();
-
-// change image collection (small screen)    
-let imageIndex = 0
-const rightArrow = document.querySelector('#right-arrow');
-const leftArrow = document.querySelector('#left-arrow');
-const imageCollection = document.querySelector('.image-collection');
-const imageNumber = document.querySelector('#image-number');
-let images = [
-    'url("../images/pexels-element-digital-1125136.jpg")',
-    'url("../images/pexels-isaw-company-945688.jpg")',
-    'url("../images/pexels-jean-van-der-meulen-1457844.jpg")',
-    'url("../images/pexels-medhat-ayad-383568.jpg")',
-    'url("../images/pexels-marta-dzedyshko-2067638.jpg")'
-]
-
-
-imageNumber.innerHTML =  '1/' +  images.length
-
-leftArrow.addEventListener('click', _=> {
-    if (imageIndex == 0) {
-        imageIndex = images.length - 1;
-        imageCollection.style.backgroundImage = images[imageIndex]
-    }else {
-        imageCollection.style.backgroundImage = images[imageIndex - 1];
-
-        imageIndex --;
-    }
-        
-    imageNumber.innerHTML = (imageIndex + 1).toString() + '/' + images.length.toString();
-});
-
-rightArrow.addEventListener('click', _=> {
-    imageCollection.style.backgroundImage = images[imageIndex + 1];
-
-    imageIndex ++;
+// image collection (small screen)    
+const portfolioImageCollection = function() {
+    let imageIndex = 0
+    // right button
+    const rightArrow = document.querySelector('#right-arrow');
+    // left button
+    const leftArrow = document.querySelector('#left-arrow');
+    // image container
+    const imageCollection = document.querySelector('.image-collection');
+    // image index
+    const imageNumber = document.querySelector('#image-number');
     
-    if (imageIndex > images.length - 1) {
-        imageIndex = 0;
-        imageCollection.style.backgroundImage = images[imageIndex]
-    }
+    /* change the Collection image */
+    function changeImage(imagesList) {
+        let images = imagesList.portfolioImagesCollection; // list of images
 
-    imageNumber.innerHTML = (imageIndex + 1).toString() + '/' + images.length.toString();
-});
-// products images show
-const productImage = document.querySelectorAll(".product-image");
-let i = 0;
-let productImage_index;
-let selectedItem;
-let imagesList;
-
-setInterval(() => {
-    if(i === imagesList.itemsImages.length) {i = 0}
-    
-    productImage_index = Math.floor(Math.random() * productImage.length)
-
-    
-    selectedItem = productImage[productImage_index];
-    
-    if(selectedItem.style.display !== "None") {
-        selectedItem.animate([
-            // keyframes
-            {opacity:0},
-            {opacity:1}
-        ], {
-            // timing options
-            duration: 1000
+        imageNumber.innerHTML =  '1/' +  images.length; // image index
+        // go to the previous image
+        leftArrow.addEventListener('click', _=> {
+            // if this is the first image then go to the last image
+            if (imageIndex == 0) {
+                imageIndex = images.length - 1;
+                imageCollection.style.backgroundImage = images[imageIndex]
+            }else { //if not, go to the previous image
+                imageCollection.style.backgroundImage = images[--imageIndex]; // imageIndex = imageIndex - 1        
+            }
+            // change the image index
+            imageNumber.innerHTML = (imageIndex + 1).toString() + '/' + images.length.toString();
         });
-        selectedItem.src = imagesList.itemsImages[i].toString();
+        // go to the next image
+        rightArrow.addEventListener('click', _=> {
+            imageCollection.style.backgroundImage = images[++imageIndex]; // imageIndex = imageIndex + 1
+            // if this is the last image then go to the first image
+            if (imageIndex > images.length - 1) {
+                imageIndex = 0;
+                imageCollection.style.backgroundImage = images[imageIndex]
+            }
+            // change the image index
+            imageNumber.innerHTML = (imageIndex + 1).toString() + '/' + images.length.toString();
+        });
     }
-    selectedItem.classList.remove("opacity-animation");
-    i++;
-}, 4000);
+    /* 
+        sending the function to be able to work with the json value in the xhttp.onload method, since the variables inside this method are not accessible outside it
+     */
+    getItem(changeImage);
+}();
+
+// change products image
+const changeProducts = function() {
+    let i = 0; // index for images
+    let index; // index for img tag(class="product-image")
+    let selectedImgTag;
+    const productImage = document.querySelectorAll(".product-image"); // list of img tag with the class "product-image"
+
+    function loop(imagesList) {
+        setInterval(() => {
+            if(i === imagesList.itemsImages.length) {i = 0}
+
+            index = Math.floor(Math.random() * productImage.length);
+            selectedImgTag = productImage[index];
+            
+            /* applies an opacity animation when changing images (works like css keyframe) */
+            selectedImgTag.animate(
+                [
+                    // keyframes
+                    {opacity:0},
+                    {opacity:1}
+                ], {
+                    // timing options
+                    duration: 1000
+                }
+            );
+            selectedImgTag.src = imagesList.itemsImages[i].toString(); // change the image
+            i++;
+        }, 2500);
+    }
+    /* 
+        sending the function to be able to work with the json value in the xhttp.onload method, since the variables inside this method are not accessible outside it
+     */
+    getItem(loop);
+}();

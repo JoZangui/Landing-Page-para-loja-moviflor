@@ -9,11 +9,6 @@
         "images/pngwing_com_15.png",
         "images/pngwing_com_16.png"
     ],
-    "portfolioImages": [
-        "url('images/pexels-max-vakhtbovych-6538898.jpg')",
-        "url('images/pexels-max-vakhtbovych-6758773.jpg')",
-        "url('https://www.pexels.com/photo/white-bed-comforter-during-daytime-90317/')"
-    ],
     "portfolioImagesCollection": [
         "url(\"../images/pexels-element-digital-1125136.jpg\")",
         "url(\"../images/pexels-isaw-company-945688.jpg\")",
