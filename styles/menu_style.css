@@ -16,6 +16,7 @@ body {
 button {
     border: none;
 }
+/* top-nav container */
 .top-nav {
     width: 100%;
     height: 71px;
@@ -38,6 +39,11 @@ button {
     color: #003E19; 
     transform: rotate(-45deg);
 }
+/*
+    container for: 
+    the Moviflor logo,
+    search bar and the shopping cart icon
+*/
 .top-nav #topnav-itens-container {
     width: 87.7%;
     display: flex;
@@ -45,8 +51,8 @@ button {
     align-items: center;
     transform: translateX(8.4%);
     box-sizing: border-box;
-    /* border: 1px solid; */
 }
+/* Moviflor logo */
 .top-nav #topnav-itens-container #logo {
     width: 106px;
     height: 35px;
@@ -108,6 +114,9 @@ button {
 .top-nav #topnav-itens-container .shopping-cart:hover {
     color: #003E19;
 }
+
+
+/* Side-nav container */
 .side-nav {
     width: 308px;
     height: 459px;
@@ -124,7 +133,7 @@ button {
     background-color: #ffff;
     z-index: 98;
 }
-/* lista de icone */
+/* side-nav list(ul) */
 .side-nav #side-nav--item-container {
     height: 377px;
     list-style: none;
@@ -133,13 +142,10 @@ button {
     overflow-x: hidden;
     box-sizing: border-box;
 }
-/* icone */
 .side-nav #side-nav--item-container > li {
     padding: 22px 0;
 }
-.side-nav #side-nav--item-container > li a {
-    transition: color .2s ease-in-out;
-}
+/* When the item is selected */
 .side-nav #side-nav--item-container > .actived-list-item a,
 .side-nav #side-nav--item-container > .actived-list-item:hover a {
     color: #003E19;
@@ -149,29 +155,40 @@ button {
     display: flex;
     align-items: center;
 }
+
+
+/* container  for <a>list item icon and link-name</a> and arrow icon*/
 .side-nav #side-nav--item-container li div {
     justify-content: space-between;
+}
+.side-nav #side-nav--item-container li div .iconify, i {
+    font-size: 29px;
+    cursor: pointer;
 }
 .side-nav #side-nav--item-container li div a {
     font-weight: bold;
     color: #333333;
     text-decoration: none;
+    transition: color .2s ease-in-out;
     opacity: 0.7;
 }
-.side-nav #side-nav--item-container li div:hover > a {
+.side-nav #side-nav--item-container li div:hover > a,
+.side-nav #side-nav--item-container li div .arrow:hover {
     color: #92aa09;
     opacity: 1;
 }
-.side-nav #side-nav--item-container li .submenu .link-name {
-    display: none;
-}
+/* list item icon */
 .side-nav #side-nav--item-container li div a .iconify {
     margin-right: 10px;
 }
+/* arrow icon */
 .side-nav #side-nav--item-container li div .arrow {
     color: #646464;
     transition: transform .4s cubic-bezier(0.38, 0.29, 0.36, 1.32);
 }
+
+
+/* submenu */
 .side-nav #side-nav--item-container li .submenu {
     height: 190px;
     display: none;
@@ -195,14 +212,9 @@ button {
     text-decoration: none;
     color: #ffff;
 }
-.side-nav #side-nav--item-container li:hover > .iconify {
-    color: #003E19;
-}
-.side-nav #side-nav--item-container li .iconify, i {
-    font-size: 29px;
-    cursor: pointer;
-}
-/* dropdown menu */
+
+
+/* dropdown submenu */
 .side-nav #side-nav--item-container li.show-submenu > .submenu {
     display: block;
 }
@@ -216,7 +228,8 @@ button {
     transform: rotate(-180deg);
 }
 
-/* when it's closed */
+
+/* when side-nav is closed */
 .side-nav.close {
     width: 48px;
     overflow: visible;
@@ -237,6 +250,8 @@ button {
 .side-nav.close #side-nav--item-container li .submenu {
     display: none;
 }
+
+/* small screen menu */
 .bottom-menu {
     display: none;
 }
