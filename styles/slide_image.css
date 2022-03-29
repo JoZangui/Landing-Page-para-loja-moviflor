@@ -1,3 +1,7 @@
+/* Header carousel */
+/* -------------- */
+
+/* change image */
 @keyframes display {
     0% {
         opacity: 0;
@@ -32,6 +36,11 @@
 .dot {
     animation: change-image-indicator 20s infinite;
 }
+
+/*
+    apply a delay for each item.
+    this enables each item to be presented at the right time
+*/
 .header-image:nth-child(2),
 .dot:nth-child(2),
 .header-title:nth-child(2),
@@ -57,6 +66,7 @@
     animation-delay: 16s;
 }
 
+/* change selected indicator */
 @keyframes change-image-indicator {
     0% {
         background-color: #c5c5c5;
